@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a9788c944f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!--HEADER-->
+    <header>
+      <div class="toggleBtn">
+        <img src="/images/icon-menu.svg" alt="" />
+      </div>
+      <div class="logo">
+        <img src="/images/logo.svg" alt="" />
+      </div>
+      <nav>
+        <div class="nav-links">
+          <a href="#">Collections</a>
+          <a href="#">Men</a>
+          <a href="#">Women</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="nav-right flex">
+          <a href="#" class="cart-icon"
+            ><i><img src="/images/icon-cart.svg" alt="carticon" /></i
+          ></a>
+          <div class="nav-avatr-container">
+            <a href="#"
+              ><img
+                src="/images/image-avatar.png"
+                alt="avatar"
+                class="nav-avatr"
+            /></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--Main-->
+    <section id="main">
+      <div class="product-info-box">
+        <!--IMAGE SIDE-->
+        <div class="image-gallery sticky">
+          <div class="ig-main-image">
+            <img src="/images/image-product-1.jpg" alt="" />
+          </div>
+          <div class="image-tumbs">
+            <div class="image-tumbs-img active">
+              <img src="/images/image-product-1-thumbnail.jpg" alt="" />
+            </div>
+            <div class="image-tumbs-img">
+              <img src="/images/image-product-2-thumbnail.jpg" alt="" />
+            </div>
+            <div class="image-tumbs-img">
+              <img src="/images/image-product-3-thumbnail.jpg" alt="" />
+            </div>
+            <div class="image-tumbs-img">
+              <img src="/images/image-product-4-thumbnail.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- PRODUCT DETAILS SIDE -->
+        <div class="product-details">
+          <div class="brand">SNEAKER COMPANY</div>
+          <div class="product-details-title">
+            <h1>Fall Limited Edition Sneaker</h1>
+          </div>
+          <div class="product-details-desc">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </div>
+          <div class="prices">
+            <div class="price-discount">
+              <div class="price">$125.00</div>
+              <div class="discount">50%</div>
+            </div>
+            <div class="discountPrice">$250.00</div>
+          </div>
+          <div class="buttons-group">
+            <div class="quantity-btns">
+              <i class="fas fa-minus"></i
+              ><input type="number" value="0" hidden="true" />
+              <span class="quantity">0</span>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="addcartButton">
+              <img src="/images/icon-cart.svg" />
+              <div class="addcartButton-text">Add to cart</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
