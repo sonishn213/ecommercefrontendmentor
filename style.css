@@ -241,7 +241,7 @@ header {
   display: none;
   margin-left: 20px;
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 510px) {
   body {
     max-width: 100%;
   }
@@ -320,6 +320,6 @@ header {
     margin-top: 0;
   }
   .product-details-title h1 {
-    font-size: 25px;
+    font-size: 30px;
   }
 }
