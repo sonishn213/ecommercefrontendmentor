@@ -20,9 +20,30 @@
   </head>
   <body>
     <!--HEADER-->
+    <section class="mobile-menu">
+      <div class="sidebar">
+        <img
+          src="images/icon-close.svg"
+          class="sidebar-close"
+          onclick="closeSidebar()"
+        />
+        <div class="mob-nav-links">
+          <a href="#">Collections</a>
+          <a href="#">Men</a>
+          <a href="#">Women</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </section>
     <header>
       <div class="toggleBtn">
-        <img src="images/icon-menu.svg" alt="" />
+        <img
+          src="images/icon-menu.svg"
+          alt=""
+          class="menuBtn"
+          onclick="openSidebar()"
+        />
       </div>
       <div class="logo">
         <img src="images/logo.svg" alt="" />
@@ -36,9 +57,11 @@
           <a href="#">Contact</a>
         </div>
         <div class="nav-right flex">
-          <a href="#" class="cart-icon"
-            ><i><img src="images/icon-cart.svg" alt="carticon" /></i
-          ></a>
+          <div class="cart-container">
+            <a href="javascript:showCart()" class="cart-icon"
+              ><i><img src="images/icon-cart.svg" alt="carticon" /></i
+            ></a>
+          </div>
           <div class="nav-avatr-container">
             <a href="#"
               ><img
@@ -50,28 +73,81 @@
         </div>
       </nav>
     </header>
+    <div class="cart-display-section">
+      <div class="cart-list-container">
+        <div class="cart-title">Cart</div>
+        <div class="cart-body"><span>Your cart is empty.</span></div>
+      </div>
+    </div>
+
     <!--Main-->
     <section id="main">
       <div class="product-info-box">
         <!--IMAGE SIDE-->
-        <div class="image-gallery sticky">
-          <div class="ig-main-image">
+        <section class="light-box">
+          <div>
+            <div class="light-box-close" onclick="closeLightBox()">
+              <img src="images/icon-close.svg" alt="" />
+            </div>
+            <div class="image-gallery">
+              <div class="ig-main-image">
+                <div
+                  class="prevIcon prev"
+                  onclick="plusSlides(-1)"
+                  id="prevbtn"
+                >
+                  <img src="images/icon-previous.svg" />
+                </div>
+
+                <img src="images/image-product-1.jpg" class="mySlides" alt="" />
+                <img src="images/image-product-2.jpg" class="mySlides" alt="" />
+                <img src="images/image-product-3.jpg" class="mySlides" alt="" />
+                <img src="images/image-product-4.jpg" class="mySlides" alt="" />
+                <div class="nextIcon prev" onclick="plusSlides(1)" id="nextbtn">
+                  <img src="images/icon-next.svg" />
+                </div>
+              </div>
+              <div class="image-tumbs">
+                <div
+                  class="image-tumbs-img active dot"
+                  onclick="currentSlide(1)"
+                >
+                  <img src="images/image-product-1-thumbnail.jpg" alt="" />
+                </div>
+                <div class="image-tumbs-img dot" onclick="currentSlide(2)">
+                  <img src="images/image-product-2-thumbnail.jpg" alt="" />
+                </div>
+                <div class="image-tumbs-img dot" onclick="currentSlide(3)">
+                  <img src="images/image-product-3-thumbnail.jpg" alt="" />
+                </div>
+                <div class="image-tumbs-img dot" onclick="currentSlide(4)">
+                  <img src="images/image-product-4-thumbnail.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- light box end  -->
+        <div class="image-gallery sticky desk-main-image">
+          <div class="ig-main-image" onclick="showLightBox(1)">
             <img src="images/image-product-1.jpg" alt="" />
           </div>
+
           <div class="image-tumbs">
-            <div class="image-tumbs-img active">
+            <div class="image-tumbs-img active" onclick="showLightBox(1)">
               <img src="images/image-product-1-thumbnail.jpg" alt="" />
             </div>
-            <div class="image-tumbs-img">
+            <div class="image-tumbs-img" onclick="showLightBox(2)">
               <img src="images/image-product-2-thumbnail.jpg" alt="" />
             </div>
-            <div class="image-tumbs-img">
+            <div class="image-tumbs-img" onclick="showLightBox(3)">
               <img src="images/image-product-3-thumbnail.jpg" alt="" />
             </div>
-            <div class="image-tumbs-img">
+            <div class="image-tumbs-img" onclick="showLightBox(4)">
               <img src="images/image-product-4-thumbnail.jpg" alt="" />
             </div>
           </div>
+          <!-- Mobile main image -->
         </div>
         <!-- PRODUCT DETAILS SIDE -->
         <div class="product-details">
@@ -93,10 +169,10 @@
           </div>
           <div class="buttons-group">
             <div class="quantity-btns">
-              <i class="fas fa-minus"></i
+              <i class="fas fa-minus" onclick="decreaseQty()"></i
               ><input type="number" value="0" hidden="true" />
-              <span class="quantity">0</span>
-              <i class="fas fa-plus"></i>
+              <span class="quantity" id="quantity">0</span>
+              <i class="fas fa-plus" onclick="increaseQty()"></i>
             </div>
             <div class="addcartButton">
               <img src="images/icon-cart.svg" />
@@ -106,5 +182,7 @@
         </div>
       </div>
     </section>
+
+    <script src="index.js"></script>
   </body>
 </html>
