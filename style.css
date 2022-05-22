@@ -512,6 +512,7 @@ header {
   font-weight: 700;
   cursor: pointer;
   align-self: flex-end;
+  justify-content: center;
 }
 
 .cart-item-info-prices .prices-left {
