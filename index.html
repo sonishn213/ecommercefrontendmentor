@@ -59,7 +59,8 @@
         <div class="nav-right flex">
           <div class="cart-container">
             <a href="javascript:showCart()" class="cart-icon"
-              ><i><img src="images/icon-cart.svg" alt="carticon" /></i
+              ><span class="badge" value="0"
+                ><img src="images/icon-cart.svg" alt="carticon" /></span
             ></a>
           </div>
           <div class="nav-avatr-container">
@@ -74,9 +75,18 @@
       </nav>
     </header>
     <div class="cart-display-section">
-      <div class="cart-list-container">
-        <div class="cart-title">Cart</div>
-        <div class="cart-body"><span>Your cart is empty.</span></div>
+      <div style="position: relative">
+        <div class="cart-list-container">
+          <div class="cart-title">Cart</div>
+          <div class="cart-body">
+            <span>Your cart is empty.</span>
+            <div class="cart-items-list">
+              <!-- new cart items goes here -->
+              <!-- inserted through javascript -->
+            </div>
+            <div class="btn">Checkout</div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -169,12 +179,11 @@
           </div>
           <div class="buttons-group">
             <div class="quantity-btns">
-              <i class="fas fa-minus" onclick="decreaseQty()"></i
-              ><input type="number" value="0" hidden="true" />
+              <i class="fas fa-minus" onclick="decreaseQty()"></i>
               <span class="quantity" id="quantity">0</span>
               <i class="fas fa-plus" onclick="increaseQty()"></i>
             </div>
-            <div class="addcartButton">
+            <div class="addcartButton" onclick="addToCart()">
               <img src="images/icon-cart.svg" />
               <div class="addcartButton-text">Add to cart</div>
             </div>
